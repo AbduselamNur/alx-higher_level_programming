@@ -14,4 +14,4 @@ if __name__ == "__main__":
     data = {'email':  email}
     req = requests.post(url, data=data)
     output = req.text
-    print(output)
+    print("{}".format(output))
