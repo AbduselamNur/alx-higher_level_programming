@@ -134,3 +134,15 @@ Write a script that searches the second biggest integer in the list of arguments
 * If the number of arguments is 1, print 0
 * You must use console.log(...) to print all output
 * You are not allowed to use var
+
+### 12. Object
+
+Update this script to replace the value 12 with 89:
+* You are not allowed to use var
+
+### 13. Add file
+
+Write a function that returns the addition of 2 integers.
+* The function must be visible from outside
+* The name of the function must be add
+* You are not allowed to use var
