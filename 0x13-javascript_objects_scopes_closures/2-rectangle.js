@@ -1,9 +1,9 @@
 #!/usr/bin/node
-module.exports = class Rectanle {
-  constructor (width, height) {
-    if (Number.isInteger(width) && Number.isInteger(height) && width > 0 && height > 0) {
-      this.width = width;
-      this.height = height;
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (Number.isInteger(w) && Number.isInteger(h) && w > 0 && h > 0) {
+      this.width = w;
+      this.height = h;
     }
   }
 };
