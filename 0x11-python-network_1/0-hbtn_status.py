@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 # A Python script that fetches https://alx-intranet.hbtn.io/status
-from urllib import request
+import urllib.request
 
 
 if __name__ == "__main__":
     try:
         url = "https://alx-intranet.hbtn.io/status"
-        with request.urlopen(url) as response:
+        with urllib.request.urlopen(url) as response:
             output = response.read()
 
             print("Body response:")
