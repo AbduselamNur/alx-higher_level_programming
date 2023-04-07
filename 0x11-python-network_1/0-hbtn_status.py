@@ -4,11 +4,14 @@ from urllib import request
 
 
 if __name__ == "__main__":
-    url = "https://alx-intranet.hbtn.io/status"
-    with request.urlopen(url) as response:
-        output = response.read()
+    try:
+        url = "https://alx-intranet.hbtn.io/status"
+        with request.urlopen(url) as response:
+            output = response.read()
 
-        print("Body response:")
-        print("\t- type:", type(output))
-        print("\t- content:", output)
-        print("\t- utf8 content:", output.decode('utf-8'))
+            print("Body response:")
+            print("    - type:", type(output))
+            print("    - content:", output)
+            print("    - utf8 content:", output.decode('utf-8'))
+    except urllib.error.URLError as e:
+        print("An Error occurred:", e)
