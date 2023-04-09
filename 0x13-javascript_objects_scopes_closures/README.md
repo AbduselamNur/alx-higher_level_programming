@@ -87,3 +87,14 @@ Write a class Square that defines a square and inherits from Square of 5-square.
 * You must use the class notation for defining your class and extends
 * Create an instance method called charPrint(c) that prints the rectangle using the character c
 	* If c is undefined, use the character X
+
+### 7. Occurrences
+
+Write a function that returns the number of occurrences in a list:
+* Prototype: exports.nbOccurences = function (list, searchElement)
+
+### 8. Esrever
+
+Write a function that returns the reversed version of a list:
+* Prototype: exports.esrever = function (list)
+* You are not allow to use the built-in method reverse
