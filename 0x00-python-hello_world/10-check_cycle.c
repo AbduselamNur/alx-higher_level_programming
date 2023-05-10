@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 /**
  * check_cycle - check list the list of node
