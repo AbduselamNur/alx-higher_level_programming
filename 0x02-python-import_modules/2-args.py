@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    args = len(sys.argv)
-    print("{} ".format(args - 1), end="")
-    if args == 1:
+    ar = len(sys.argv)
+    print("{} ".format(ar - 1), end="")
+    if ar == 1:
         print("arguments.")
-    elif args > 1:
-        elif args >= 2:
+    elif ar > 1:
+        if ar == 2:
+            print("argument:")
+        elif ar > 2:
             print("arguments:")
-        for i in range(args - 1):
+        for i in range(ar - 1):
             print("{}: {}".format((i + 1), sys.argv[i + 1]))
