@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     curs = mydb.cursor()
     curs.execute("""SELECT * FROM states
-                    WHERE name LIKE '{}'
+                    WHERE name LIKE BINARY '{}'
                     ORDER BY states.id ASC""".format(sys.argv[4]).strip("'"))
     res = curs.fetchall()
 
