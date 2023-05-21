@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that Get all states"""
+"""Module that Filter states by user input """
 import MySQLdb
 import sys
 
@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     curs = mydb.cursor()
     q = "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".format(
-            arg)
+            arg).strip("'")
     curs.execute(q)
     res = curs.fetchall()
 
