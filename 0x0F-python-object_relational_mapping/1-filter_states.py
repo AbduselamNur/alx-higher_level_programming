@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Module that Get all states"""
+"""Module that Get all states Start with N """
 import MySQLdb
 import sys
+
 
 if __name__ == "__main__":
     u_name = sys.argv[1]
