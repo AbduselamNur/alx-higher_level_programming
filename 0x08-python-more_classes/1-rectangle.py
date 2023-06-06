@@ -10,6 +10,13 @@ class Rectangle:
     """
     __width = None
 
+    def __init__(self, width=0, height=0):
+        """
+        Function That Initialize the class
+        """
+        self.height = height
+        self.width = width
+
     @property
     def width(self):
         """
@@ -48,10 +55,3 @@ class Rectangle:
             raise ValueError("height must be")
         else:
             self.__height = value
-
-    def __init__(self, width=0, height=0):
-        """
-        Function That Initialize the class
-        """
-        self.height = height
-        self.width = width
