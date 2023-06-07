@@ -13,8 +13,8 @@ class Rectangle:
         """
         Function That Initialize the class
         """
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
