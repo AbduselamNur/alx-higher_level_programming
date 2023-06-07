@@ -1,23 +1,21 @@
 #!/usr/bin/python3
 """
 
-There is No Module in this Task
+There is No Module for this Task
+
 
 """
 
 
 class Rectangle:
-    """
-    Define Rectangle class
-    """
+    """ Rectangle class that defined """
 
     def __init__(self, width=0, height=0):
-        """
-        init function is initialize the reactangle class
+        """  initializes the instance
 
         Args:
-            width (int): width of the Reactangle
-            height (int): height of the Rectangle
+            width (int): width of the rectangle
+            height (int): height of the rectangle
 
 
         """
@@ -26,29 +24,30 @@ class Rectangle:
 
     @property
     def width(self):
+        """ function method that returns the value of the width
+
+        Returns:
+            return the the self privat width of the rectangle
+
+
         """
-        width function is retrive the private instance
 
-        Return:
-            return the width
-
-
-        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        width function that set the private instance
+        """ function method that defines the width
 
         Args:
-            value (int): the value of the width
-        Raise:
-            TypeError: width must be an integer
-            ValueError width must be >= 0
+            value: width of the reactangle
+
+        Raises:
+            TypeError: if width is not an integer rasie  TypeError
+            ValueError: if width is less than zero raise ValueError
 
 
         """
+
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -57,31 +56,32 @@ class Rectangle:
 
     @property
     def height(self):
+        """ Function method that returns the value of the height
+
+        Returns:
+            return the self height of the rectangle
+
+
         """
-        height function that retrive the height private
 
-        Return:
-            return self private height
-
-
-        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        heigth function that set height private instance
+        """ method that defines the height
 
         Args:
-            value: the height value
-        Raise:
-            TypeError: height must be an integer
-            ValueError: height must be >= 0
+            value: height
+
+        Raises:
+            TypeError: if height is not an integer raise TypeError
+            ValueError: if height is less than zero raise ValueError
 
 
         """
+
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
