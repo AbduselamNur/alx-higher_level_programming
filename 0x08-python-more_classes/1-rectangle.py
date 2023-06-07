@@ -10,6 +10,7 @@ class Rectangle:
     """
     Define Rectangle class
     """
+
     def __init__(self, width=0, height=0):
         """
         init function is initialize the reactangle class
@@ -17,6 +18,8 @@ class Rectangle:
         Args:
             width (int): width of the Reactangle
             height (int): height of the Rectangle
+
+
         """
         self.width = width
         self.height = height
@@ -28,6 +31,8 @@ class Rectangle:
 
         Return:
             return the width
+
+
         """
         return self.__width
 
@@ -41,6 +46,8 @@ class Rectangle:
         Raise:
             TypeError: width must be an integer
             ValueError width must be >= 0
+
+
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -55,6 +62,8 @@ class Rectangle:
 
         Return:
             return self private height
+
+
         """
         return self.__height
 
@@ -68,6 +77,8 @@ class Rectangle:
         Raise:
             TypeError: height must be an integer
             ValueError: height must be >= 0
+
+
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
