@@ -1,55 +1,87 @@
 #!/usr/bin/python3
 """
-There is No Module in this task
+
+This module is composed by a class that defines a Rectangle
+
+
 """
 
 
 class Rectangle:
-    """
-    define Reactangle class name
-    """
+    """ Class that defines a rectangle """
 
     def __init__(self, width=0, height=0):
-        """
-        Function That Initialize the class
+        """ Method that initializes the instance
+
+        Args:
+            width: width of the rectangle
+            height: height of the rectangle
+
+
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """ method that returns the value of the width
+
+        Returns:
+            width of the rectangle
+
+
         """
-        funtion that retrive width
-        """
+
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ method that defines the width
+
+        Args:
+            value: width
+
+        Raises:
+            TypeError: if width is not an integer
+            ValueError: if width is less than zero
+
+
         """
-        funtion that set the width
-        """
+
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self.__width = value
+        self.__width = value
 
     @property
     def height(self):
+        """ method that returns the value of the height
+
+        Returns:
+            height of the rectangle
+
+
         """
-        Funtion that retrive
-        """
+
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ method that defines the height
+
+        Args:
+            value: height
+
+        Raises:
+            TypeError: if height is not an integer
+            ValueError: if height is less than zero
+
+
         """
-        Function that set the height
-        """
+
         if not isinstance(value, int):
-            raise TypeError("height must be")
-        elif value < 0:
-            raise ValueError("height must be")
-        else:
-            self.__height = value
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
