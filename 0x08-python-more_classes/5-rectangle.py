@@ -130,6 +130,7 @@ class Rectangle:
 
     def __del__(self):
         """
-        function taht print when object delete
+        function that print when object delete
         """
-        print("Bye rectangle... ")
+
+        print("Bye rectangle...")
