@@ -89,3 +89,53 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        function that multiply the width and height
+
+        Return:
+            return width * height
+        """
+
+        return self.width * self.height
+
+    def perimeter(self):
+        """
+        funtion of perimeter that return perimeter
+
+        Return:
+            return (2*width) + (2*height)
+        """
+        perm = (2 * self.width) + (2 * self.height)
+
+        if self.width == 0 or self.height == 0:
+            return 0
+        else:
+            return perm
+
+    def __str__(self):
+        """
+        special function that conver object in to str
+        """
+        string = ""
+        if self.width == 0 or self.height == 0:
+            return ""
+        else:
+            for i in range(self.height):
+                string += (str(self.print_symbol) * self.width) + "\n"
+            return string[:-1]
+
+    def __repr__(self):
+        """
+        represent the rectangle class
+        """
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+
+    def __del__(self):
+        """
+        function that print when object delete
+        """
+
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
