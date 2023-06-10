@@ -5,7 +5,7 @@
 
 def print_square(size):
     """
-    function that print square 
+    function that print square
     by # symbole
 
     Args:
