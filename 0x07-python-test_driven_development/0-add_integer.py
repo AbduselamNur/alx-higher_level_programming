@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This Module is Add to Number"""
 
+
 def add_integer(a, b=98):
     """
     function that return the the sum
@@ -13,7 +14,7 @@ def add_integer(a, b=98):
         TypeError: a must be an integer
         TypeError: b must be an integer
 
-    Return: 
+    Return:
         a + b
     """
 
