@@ -10,3 +10,5 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empthy(self):
         self.assertEqual(max_integer([]), None)
+    def test_end(self):
+        self.assertEqual(max_integer([10, 2, 3, 40]), 40)
