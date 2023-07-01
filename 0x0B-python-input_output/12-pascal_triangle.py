@@ -1,15 +1,14 @@
 #!/usr/bin/python3
 """
-    pascal_triangle: pascal_triangle()
+    12-pascal_triangle: pascal_triangle()
 """
 
 
 def pascal_triangle(n):
     """
-        returns lists of integers
         Returns: list of lists
     """
-    t_r = [1]
+    t_row = [1]
     temp_l = [0]
     p = []
 
@@ -18,5 +17,5 @@ def pascal_triangle(n):
 
     for i in range(n):
         p.append(t_row)
-        t_r = [l+r for l, r in zip(t_r + temp_l, temp_l + t_r)]
+        t_row = [l+r for l, r in zip(t_row + temp_l, temp_l + t_row)]
     return p

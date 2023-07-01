@@ -22,7 +22,7 @@ status_codes = {
 }
 
 lc = 0
-file_size = 0
+f_size = 0
 
 try:
     for line in sys.stdin:
@@ -40,7 +40,7 @@ try:
             pass
 
         try:
-            file_size += int(pieces[-1])
+            f_size += int(pieces[-1])
         except:
             pass
 
