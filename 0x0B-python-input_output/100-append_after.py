@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-""" Module that appends a line """
+""" Module  a function that appends a line """
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """ Function that appends in new line found
+    """ appends a new line when a string is found
 
-    Args:
-        filename: file_name
-        search_string: string thatsearch
-        new_string: string to append in the str
 
     """
 
