@@ -3,7 +3,7 @@ import sys
 
 
 def print_info():
-    print('File size: {:d}'.format(file_size))
+    print('File size: {:d}'.format(f_size))
 
     for scode, code_times in sorted(status_codes.items()):
         if code_times > 0:
