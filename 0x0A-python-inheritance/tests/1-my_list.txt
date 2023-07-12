@@ -1,4 +1,9 @@
+	 testing "1-my_list.py"
+
 >>> MyList = __import__('1-my_list').MyList
+
+   Normal testing
+
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
@@ -7,6 +12,19 @@
 >>> my_list.append(5)
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
+
+  empty testing
+
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
+
+Negative testing
+
+>>> my_list = MyList()
+>>> my_list += [0]
+>>> my_list.append(-1)
+>>> my_list.append(3)
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[-1, 0, 1, 3]
