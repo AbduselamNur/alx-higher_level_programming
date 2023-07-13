@@ -92,7 +92,7 @@ TypeError: Abduselam must be an integer
 	When the value is None
 
 i = BaseGeometry()
->>> i.integer_validator("Abduselam", 5.63)
+>>> i.integer_validator("Abduselam", None)
 Traceback (most recent call last):
             ...
 TypeError: Abduselam must be an integer
@@ -100,7 +100,7 @@ TypeError: Abduselam must be an integer
 	When the value is boolen
 
 i = BaseGeometry()
->>> i.integer_validator("Abduselam", False)
+>>> i.integer_validator("Abduselam", True)
 Traceback (most recent call last):
             ...
 TypeError: Abduselam must be an integer
