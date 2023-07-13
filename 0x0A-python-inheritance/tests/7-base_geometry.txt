@@ -1,4 +1,8 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		Testing 7-base_geometry.py
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Importing
 
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -57,6 +61,42 @@ ValueError: Abduselam must be greater than 0
 	when value is floot
 
 >>> i = BaseGeometry() 
+>>> i.integer_validator("Abduselam", 5.63)
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
+
+	When the value is tuple
+i = BaseGeometry()
+>>> i.integer_validator("Abduselam", (1,))
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
+
+	When the Value is List
+
+i = BaseGeometry()
+>>> i.integer_validator("Abduselam", [5])
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
+
+	When the Vlaue bloolen
+
+i = BaseGeometry()
+>>> i.integer_validator("Abduselam", True)
+
+	When the value is dict
+
+i = BaseGeometry()
+>>> i.integer_validator("Abduselam", {1, 2})
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
+
+	When the value is None
+
+i = BaseGeometry()
 >>> i.integer_validator("Abduselam", 5.63)
 Traceback (most recent call last):
             ...
