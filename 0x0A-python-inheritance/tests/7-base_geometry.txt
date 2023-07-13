@@ -89,3 +89,10 @@ Traceback (most recent call last):
             ...
 TypeError: Abduselam must be an integer
 
+	When the value is None
+
+i = BaseGeometry()
+>>> i.integer_validator("Abduselam", None)
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
