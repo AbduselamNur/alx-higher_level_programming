@@ -1,0 +1,63 @@
+		Testing 7-base_geometry.py
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	Testing area()
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+	...
+Exception: area() is not implemented
+
+	Regular Testing
+
+>>> i = BaseGeometry()
+>>> i.integer_validator("name", "Abduselam")
+Traceback (most recent call last):
+	...
+TypeError: name must be an integer
+
+	Empty Testing
+
+>>> i = BaseGeometry()
+>>> i.integer_validator()
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	One Arg Testing
+
+>>> i = BaseGeometry()
+>>> i.integer_validator("Abduselam")
+Traceback (most recent call last):
+            ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	Correct Testing
+
+>>> i = BaseGeometry()
+>>> i.integer_validator("Abduselam", 20)
+
+	When the value is 0
+
+>>> i = BaseGeometry()
+>>> i.integer_validator("Abduselam", 0)
+Traceback (most recent call last):
+            ...
+ValueError: Abduselam must be greater than 0
+
+	When the value is Negative
+>>> i = BaseGeometry()
+>>> i.integer_validator("Abduselam", -5)
+Traceback (most recent call last):
+            ...
+ValueError: Abduselam must be greater than 0
+
+	when value is floot
+
+>>> i = BaseGeometry() 
+>>> i.integer_validator("Abduselam", 5.63)
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
