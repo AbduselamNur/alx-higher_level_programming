@@ -101,5 +101,6 @@ TypeError: Abduselam must be an integer
 
 i = BaseGeometry()
 >>> i.integer_validator("Abduselam", True)
-
-
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
