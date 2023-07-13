@@ -81,13 +81,6 @@ Traceback (most recent call last):
             ...
 TypeError: Abduselam must be an integer
 
-	When the Vlaue bloolen
-
-i = BaseGeometry()
->>> i.integer_validator("Abduselam", True)
-
-
-
 	When the value is dict
 
 i = BaseGeometry()
@@ -100,6 +93,14 @@ TypeError: Abduselam must be an integer
 
 i = BaseGeometry()
 >>> i.integer_validator("Abduselam", 5.63)
+Traceback (most recent call last):
+            ...
+TypeError: Abduselam must be an integer
+
+        When the Vlaue bloolen
+
+i = BaseGeometry()
+>>> i.integer_validator("Abduselam", True)
 Traceback (most recent call last):
             ...
 TypeError: Abduselam must be an integer
