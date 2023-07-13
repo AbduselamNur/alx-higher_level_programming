@@ -86,6 +86,8 @@ TypeError: Abduselam must be an integer
 i = BaseGeometry()
 >>> i.integer_validator("Abduselam", True)
 
+
+
 	When the value is dict
 
 i = BaseGeometry()
