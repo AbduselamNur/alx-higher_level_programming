@@ -2,5 +2,10 @@
 """
 Module that BaseGeometry Class
 """
+
+
 class BaseGeometry:
+    """
+    class that is BaseGeometry
+    """
     pass
