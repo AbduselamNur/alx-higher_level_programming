@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+"""Module that convert object to json"""
 import json
-"""Setrilization Module"""
 
 
 def to_json_string(my_obj):
