@@ -95,3 +95,5 @@ Write a function that finds a peak in a list of unsorted integers.
 * 6-peak.py must contain the function
 * 6-peak.txt must contain the complexity of your algorithm: O(log(n)), O(n), O(nlog(n)) or O(n2)
 * Note: there may be more than one peak in the list
+
+## `Tasks | Advanced`
