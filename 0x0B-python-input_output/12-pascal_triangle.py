@@ -7,13 +7,14 @@ def pascal_triangle(n):
     a function that returns a list of lists of integers
     representing the Pascal’s triangle of n
     """
+    t_r = [1]
+    t_l = [0]
+    p_t = []
+
     if n <= 0:
-        return []
-    tri = [[1]]
-    for r in range(1, n + 1):
-        r_l = [1]
-        for i in range(1, r):
-            r_l.append(tri[r - 1][i - 1] + tri[r - 1][i])
-        r_l.append(1)
-        tri.append(r_l)
-    return tri
+        return p_t
+
+    for i in range(n):
+        p_t.append(t_r)
+        t_r = [x+r for x, r in zip(t_r + t_l, t_l + t_r)]
+    return p_t
