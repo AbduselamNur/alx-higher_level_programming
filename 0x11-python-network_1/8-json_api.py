@@ -8,4 +8,18 @@ import requests
 
 
 if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        q = sys.argv[1]
+    else:
+        q = ""
+    url = 'http://0.0.0.0:5000/search_user'
+    req = requests.post(url, data={'q':  q})
 
+    try:
+        json = req.json()
+        if json:
+            print("[{}] {}".format(json.get("id"), json.get("name")))
+        else:
+            print("No result")
+    except ValueError:
+        print("Not a valid JSON")
