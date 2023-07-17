@@ -21,12 +21,12 @@ status_codes = {
     '500': 0
 }
 
-c = 0
+lc = 0
 file_size = 0
 
 try:
     for line in sys.stdin:
-        if c != 0 and c % 10 == 0:
+        if lc != 0 and lc % 10 == 0:
             print_info()
 
         pieces = line.split()
@@ -44,7 +44,7 @@ try:
         except:
             pass
 
-        c += 1
+        lc += 1
 
     print_info()
 except KeyboardInterrupt:
