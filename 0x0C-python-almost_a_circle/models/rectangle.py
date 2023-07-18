@@ -91,6 +91,7 @@ class Rectangle(Base):
         return string
 
     def update(self, *args):
+        """set with index"""
         if args:
             attr = ["id", "width", "height", "x", "y"]
             for i, arg in enumerate(args):
