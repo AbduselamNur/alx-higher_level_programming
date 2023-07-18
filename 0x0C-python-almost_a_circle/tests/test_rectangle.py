@@ -10,3 +10,7 @@ class TestReactangle(unittest.TestCase):
         r = Rectangle(1, 2)
 
         self.assertEqual(r.id, 2)
+        self.assertEqual(r.width, 1)
+        self.assertEqual(r.height, 2)
+        self.assertEqual(r.x, 0)
+        self.assertEqual(r.y, 0)
