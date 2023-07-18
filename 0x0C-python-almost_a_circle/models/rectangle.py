@@ -71,4 +71,5 @@ class Rectangle(Base):
         self.y = y
 
     def area(self):
+        """area that multiply width by height"
         return self.width * self.height
