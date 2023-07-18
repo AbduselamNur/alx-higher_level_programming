@@ -89,3 +89,9 @@ class Rectangle(Base):
                 self.id, self.x, self.y, self.width, self.height
                 )
         return string
+
+    def update(self, *args):
+        if args:
+            attr = ["id", "width", "height", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, attr[i], arg)
