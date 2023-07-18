@@ -129,3 +129,5 @@ Write a Python script that takes your GitHub credentials (username and password)
 * You must use the package requests and sys
 * You are not allowed to import packages other than requests and sys
 * You don’t need to check arguments passed to the script (number or type)
+
+### `Task | Advanced`
