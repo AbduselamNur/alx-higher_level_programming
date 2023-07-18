@@ -90,9 +90,13 @@ class Rectangle(Base):
                 )
         return string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """set with index"""
         if args:
             attr = ["id", "width", "height", "x", "y"]
             for i, arg in enumerate(args):
                 setattr(self, attr[i], arg)
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
