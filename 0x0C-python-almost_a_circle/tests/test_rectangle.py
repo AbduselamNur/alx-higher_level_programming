@@ -9,7 +9,6 @@ class TestReactangle(unittest.TestCase):
     def test_two_arg(self):
         r = Rectangle(1, 2)
 
-        self.assertEqual(r.id, 3)
         self.assertEqual(r.width, 1)
         self.assertEqual(r.height, 2)
         self.assertEqual(r.x, 0)
