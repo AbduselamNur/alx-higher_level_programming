@@ -14,9 +14,16 @@ class TestReactangle(unittest.TestCase):
         self.assertEqual(r.x, 0)
         self.assertEqual(r.y, 0)
 
-    def test_3_arg(self):
+    def test_thr_arg(self):
         r2 = Rectangle(1, 2, 3)
         self.assertEqual(r2.width, 1)
         self.assertEqual(r2.height, 2)
         self.assertEqual(r2.x, 3)
         self.assertEqual(r2.y, 0)
+
+    def test_four_arg(self):
+        r2 = Rectangle(1, 2, 3, 4)
+        self.assertEqual(r2.width, 1)
+        self.assertEqual(r2.height, 2)
+        self.assertEqual(r2.x, 3)
+        self.assertEqual(r2.y, 4)
