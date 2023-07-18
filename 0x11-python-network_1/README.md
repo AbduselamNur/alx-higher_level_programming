@@ -29,3 +29,5 @@
 	* You must use get to access to dictionary value by key (it won’t throw an exception if the key doesn’t exist in the dictionary)
 	* A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 	* Your code should not be executed when imported (by using if __name__ == "__main__":)
+
+## `Tasks | Mandatory`
