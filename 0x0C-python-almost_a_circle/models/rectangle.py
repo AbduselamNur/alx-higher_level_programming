@@ -8,14 +8,10 @@ class Rectangle(Base):
     the class Rectangle that inherits from Base
     """
 
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Intialize the class"""
-        super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+    __width = None
+    __height = None
+    __x = None
+    __y = None
 
     @property
     def width(self):
@@ -29,7 +25,7 @@ class Rectangle(Base):
     def height(self):
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, height):
         self.__height = height
 
@@ -48,3 +44,12 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         self.__y = y
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Intialize the class"""
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
