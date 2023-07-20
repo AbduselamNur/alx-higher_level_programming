@@ -78,8 +78,7 @@ class Base:
 
      @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Write the CSV serialization
-        """
+        """Write the CSV serialization"""
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
             if list_objs is None or list_objs == []:
@@ -95,8 +94,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Return a list of classes instantiated from a CSV file.
-        """
+        """Return a list of classes instantiated"""
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as csvfile:
@@ -113,8 +111,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Draw Rectangles and Squares
-        """
+        """Draw Rectangles and Squares"""
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
         turt.pensize(3)
