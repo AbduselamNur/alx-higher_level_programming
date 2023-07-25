@@ -32,4 +32,6 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r = Rectangle(1, 2, 3, "4")
 
-
+    def test_five_arg(self):
+        r = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(5, r.id)
