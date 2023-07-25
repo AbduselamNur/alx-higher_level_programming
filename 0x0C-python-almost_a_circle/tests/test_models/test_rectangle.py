@@ -21,3 +21,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.rect3.height, 2)
         self.assertEqual(self.rect3.x, 3)
         self.assertEqual(self.rect3.y, 4)
+
+    def test_err(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle("1", 2)
