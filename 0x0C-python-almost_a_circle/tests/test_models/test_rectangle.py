@@ -34,6 +34,8 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             r = Rectangle(-1, 2)
         with self.assertRaises(ValueError):
+            r = Rectangle(1, -2)
+        with self.assertRaises(ValueError):
             r = Rectangle(0, 1)
         with self.assertRaises(ValueError):
             r = Rectangle(1, 0)
