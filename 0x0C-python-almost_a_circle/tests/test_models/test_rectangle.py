@@ -47,3 +47,7 @@ class TestRectangle(unittest.TestCase):
     def test_five_arg(self):
         r = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(5, r.id)
+
+    def test_area(self):
+        r = Rectangle(2, 3)
+        self.assertEqual(r.area(), 6)
