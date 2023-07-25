@@ -22,6 +22,7 @@ class TestBase(unittest.TestCase):
     def test_unique_id(self):
         self.assertEqual(12, Base(12).id)
 
+class TestBase_to_json_string(unittest.TestCase):
     def test_to_json_string_None(self):
         self.assertEqual("[]", Base.to_json_string(None))
 
