@@ -2,6 +2,7 @@
 import unittest
 import sys
 import io
+import os
 from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
@@ -80,7 +81,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(out.getvalue(), "   #\n   #\n")
 
     def test_to_dictionary(self):
-        self.assertEqual(self.rect1.to_dictionary(), {'id': 47, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
+        self.assertEqual(self.rect1.to_dictionary(), {'id': 50, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
 
     def test_update(self):
         self.rect1.update()
@@ -91,10 +92,14 @@ class TestRectangle(unittest.TestCase):
         r.update()
         self.assertEqual("[Rectangle] (1) 1/1 - 1/1", str(r))
 
-    def test_creat_id(self):
+    def test_creat(self):
         r = Rectangle.create(**{ 'id': 89})
         self.assertEqual(r.id, 89)
 
+    def test_save_to_file_None(self):
+        Rectangle.save_to_file(None)
+        self.assertTrue(os.path.exists("Rectangle.json"))
+        self.assertEqual(os.path.getsize("Rectangle.json"), 2)
 
 
 
