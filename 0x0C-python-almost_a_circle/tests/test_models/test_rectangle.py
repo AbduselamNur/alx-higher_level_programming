@@ -105,8 +105,24 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as f:
             self.assertEqual(f.read(), '[]')
-        with open("Rectangle.json", "r") as f:
-            self.assertEqual("[]", f.read())
-        with self.assertRaises(TypeError):
-            Rectangle.save_to_file()
 
+class TestBase_save_to_file(unittest.TestCase):
+    @classmethod
+
+    def tearDown(self):
+            try:
+                os.remove("Rectangle.json")
+            except IOError:
+                pass
+            try:
+                os.remove("Square.json")
+            except IOError:
+                pass
+            try:
+                os.remove("Base.json")
+            except IOError:
+                pass
+
+    def test_save_to_file_no_args(self):
+            with self.assertRaises(TypeError):
+                Rectangle.save_to_file()
