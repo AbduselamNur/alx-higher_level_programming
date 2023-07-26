@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import unittest
+import sys
+import io
 from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
@@ -55,3 +57,32 @@ class TestRectangle(unittest.TestCase):
     def test_str(self):
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
+
+    def test_display_with_x_y(self):
+        out = io.StringIO()
+        sys.stdout = out
+        self.rect3.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(out.getvalue(), "\n\n\n\n   #\n   #\n")
+
+    def test_display_without_x_y(self):
+         out = io.StringIO()
+         sys.stdout = out
+         self.rect1.display()
+         sys.stdout = sys.__stdout__
+         self.assertEqual(out.getvalue(), "#\n#\n")
+
+    def test_display_without_y(self):
+        out = io.StringIO()
+        sys.stdout = out
+        self.rect2.display()
+        sys.stdout = sys.__stdout__
+        self.assertEqual(out.getvalue(), "   #\n   #\n")
+
+
+
+
+
+
+
+
