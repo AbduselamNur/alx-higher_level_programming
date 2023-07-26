@@ -33,6 +33,11 @@ class TestSquare(unittest.TestCase):
         s = Square(1, 1, 1, 1)
         self.assertEqual(s.to_dictionary(), {'id': 1, 'x': 1, 'size': 1, 'y': 1,})
 
+    def test_update(self):
+        s = Square(1)
+        s.update()
+        self.assertEqual(s.size, 1)
+
 class TestSquareErr(unittest.TestCase):
     def test_square_first_str(self):
         with self.assertRaises(TypeError):
