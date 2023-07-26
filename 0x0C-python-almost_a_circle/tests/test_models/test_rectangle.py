@@ -4,6 +4,8 @@ import sys
 import io
 import os
 from models.rectangle import Rectangle
+from models.square import Square
+from models.base import Base
 
 class TestRectangle(unittest.TestCase):
     def setUp(self):
@@ -81,7 +83,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(out.getvalue(), "   #\n   #\n")
 
     def test_to_dictionary(self):
-        self.assertEqual(self.rect1.to_dictionary(), {'id': 51, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
+        self.assertEqual(self.rect1.to_dictionary(), {'id': 53, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
 
     def test_update(self):
         self.rect1.update()
@@ -100,7 +102,7 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(1, 2)
         Rectangle.save_to_file([r1])
         with open("Rectangle.json", "r") as f:
-            self.assertEqual(f.read(), '[{"id": 47, "width": 1, "height": 2, "x": 0, "y": 0}]')
+            self.assertEqual(f.read(), '[{"id": 49, "width": 1, "height": 2, "x": 0, "y": 0}]')
 
         Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as f:
@@ -126,3 +128,26 @@ class TestBase_save_to_file(unittest.TestCase):
     def test_save_to_file_no_args(self):
             with self.assertRaises(TypeError):
                 Rectangle.save_to_file()
+
+class TestBase_load_from_file(unittest.TestCase):
+    @classmethod
+    def tearDown(self):
+        try:
+            os.remove("Rectangle.json")
+        except IOError:
+            pass
+
+    def test_load_from_file_no_file(self):
+        output = Square.load_from_file()
+        self.assertEqual([], output)
+
+    def test_load_from_file_more_than_one_arg(self):
+        with self.assertRaises(TypeError):
+            Base.load_from_file([], 1)
+
+    def test_load_from_file_first_rectangle(self):
+        r1 = Rectangle(10, 7, 2, 8, 1)
+        r2 = Rectangle(2, 4, 5, 6, 2)
+        Rectangle.save_to_file([r1, r2])
+        list_rectangles_output = Rectangle.load_from_file()
+        self.assertEqual(str(r1), str(list_rectangles_output[0]))
