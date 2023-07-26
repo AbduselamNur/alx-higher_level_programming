@@ -24,3 +24,18 @@ class TestBase(unittest.TestCase):
 
     def test_to_json_string_None(self):
         self.assertEqual("[]", Base.to_json_string(None))
+
+class TestBase_from_json_string(unittest.TestCase):
+    def test_from_json_string_None(self):
+        self.assertEqual([], Base.from_json_string(None))
+
+    def test_from_json_string_empty_list(self):
+        self.assertEqual([], Base.from_json_string("[]"))
+
+    def test_from_json_string_no_args(self):
+        with self.assertRaises(TypeError):
+            Base.from_json_string()
+
+    def test_from_json_string_more_than_one_arg(self):
+        with self.assertRaises(TypeError):
+            Base.from_json_string([], 1)
