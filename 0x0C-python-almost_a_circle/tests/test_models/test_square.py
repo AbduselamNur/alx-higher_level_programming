@@ -36,20 +36,6 @@ class TestSquareErr(unittest.TestCase):
     def test_square_third_str(self):
         with self.assertRaises(TypeError):
             s = Square(1, 2, "3")
-            """
     def test_square_first_neg(self):
         with self.assertRaises(ValueError):
             s = Square(-1)
-
-    def test_square_second_neg(self):
-        with self.assertEqual(ValueError):
-            s = Square(1, -2)
-
-    def test_square_third_neg(self):
-        with self.assertEqual(ValueError):
-            s = Square(1, 2, -3)
-
-    def test_square_zero(self):
-        with self.assertEqual(ValueError):
-            s = Square(0)
-"""
