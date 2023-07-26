@@ -47,6 +47,11 @@ class TestSquare(unittest.TestCase):
         s = Square.create(**{ 'id': 89 })
         self.assertEqual(s.id, 89)
 
+    def test_save_to_file_None(self):
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            self.assertEqual(f.read(), '[]')
+
 class TestSquareErr(unittest.TestCase):
     def test_square_first_str(self):
         with self.assertRaises(TypeError):
