@@ -25,6 +25,10 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s.y, 3)
         self.assertEqual(s.id, 4)
 
+    def test_str(self):
+        s = Square(1, 1, 1, 1)
+        self.assertEqual(str(s), "[Square] (1) 1/1 - 1")
+
 class TestSquareErr(unittest.TestCase):
     def test_square_first_str(self):
         with self.assertRaises(TypeError):
