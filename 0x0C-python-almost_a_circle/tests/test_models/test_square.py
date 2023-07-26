@@ -38,6 +38,15 @@ class TestSquare(unittest.TestCase):
         s.update()
         self.assertEqual(s.size, 1)
 
+    def test_update_empty(self):
+        s = Square(1, 1, 1, 1)
+        s.update()
+        self.assertEqual(str(s), "[Square] (1) 1/1 - 1")
+
+    def test_create(self):
+        s = Square.create(**{ 'id': 89 })
+        self.assertEqual(s.id, 89)
+
 class TestSquareErr(unittest.TestCase):
     def test_square_first_str(self):
         with self.assertRaises(TypeError):
