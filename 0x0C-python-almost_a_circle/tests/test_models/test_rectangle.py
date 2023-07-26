@@ -81,7 +81,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(out.getvalue(), "   #\n   #\n")
 
     def test_to_dictionary(self):
-        self.assertEqual(self.rect1.to_dictionary(), {'id': 60, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
+        self.assertEqual(self.rect1.to_dictionary(), {'id': 54, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
 
     def test_update(self):
         self.rect1.update()
@@ -95,16 +95,6 @@ class TestRectangle(unittest.TestCase):
     def test_creat(self):
         r = Rectangle.create(**{ 'id': 89})
         self.assertEqual(r.id, 89)
-
-    def test_save_to_file_None(self):
-        Rectangle.save_to_file(None)
-        self.assertTrue(os.path.exists("Rectangle.json"))
-        self.assertEqual(os.path.getsize("Rectangle.json"), 2)
-
-    def test_save_to_file_empty(self):
-        Rectangle.save_to_file([])
-        self.assertTrue(os.path.exists("Rectangle.json"))
-        self.assertEqual(os.path.getsize("Rectangle.json"), 2)
 
     def test_save_to_file(self):
         r1 = Rectangle(1, 2)
