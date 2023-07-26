@@ -52,6 +52,11 @@ class TestSquare(unittest.TestCase):
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
+    def test_save_to_file_empty(self):
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            self.assertEqual(f.read(), '[]')
+
 class TestSquareErr(unittest.TestCase):
     def test_square_first_str(self):
         with self.assertRaises(TypeError):
