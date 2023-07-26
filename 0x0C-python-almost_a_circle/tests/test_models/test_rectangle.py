@@ -80,7 +80,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(out.getvalue(), "   #\n   #\n")
 
     def test_to_dictionary(self):
-        self.assertEqual(self.rect1.to_dictionary(), {'id': 43, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
+        self.assertEqual(self.rect1.to_dictionary(), {'id': 47, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
 
     def test_update(self):
         self.rect1.update()
@@ -90,6 +90,10 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(1, 1, 1, 1, 1)
         r.update()
         self.assertEqual("[Rectangle] (1) 1/1 - 1/1", str(r))
+
+    def test_creat_id(self):
+        r = Rectangle.create(**{ 'id': 89})
+        self.assertEqual(r.id, 89)
 
 
 
