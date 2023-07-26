@@ -82,6 +82,9 @@ class TestRectangle(unittest.TestCase):
     def test_to_dictionary(self):
         self.assertEqual(self.rect1.to_dictionary(), {'id': 43, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
 
+    def test_update(self):
+        self.rect1.update()
+        self.assertEqual(self.rect1.width, 1)
 
 
 
