@@ -79,6 +79,9 @@ class TestRectangle(unittest.TestCase):
         sys.stdout = sys.__stdout__
         self.assertEqual(out.getvalue(), "   #\n   #\n")
 
+    def test_to_dictionary(self):
+        self.assertEqual(self.rect1.to_dictionary(), {'id': 43, 'width': 1, 'height': 2, 'x': 0, 'y': 0})
+
 
 
 
