@@ -101,3 +101,8 @@ class TestBase_save_to_file(unittest.TestCase):
         with open("Square.json", "r") as f:
             self.assertEqual("[]", f.read())
 
+    def test_save_to_file_one(self):
+        s1 = Square(1)
+        Square.save_to_file([s1])
+        with open("Square.json", "r") as f:
+            self.assertEqual(f.read(), '[{"id": 66, "size": 1, "x": 0, "y": 0}]')
