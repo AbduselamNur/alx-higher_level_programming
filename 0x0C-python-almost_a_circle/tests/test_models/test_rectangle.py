@@ -86,6 +86,11 @@ class TestRectangle(unittest.TestCase):
         self.rect1.update()
         self.assertEqual(self.rect1.width, 1)
 
+    def test_update_empty(self):
+        r = Rectangle(1, 1, 1, 1, 1)
+        r.update()
+        self.assertEqual("[Rectangle] (1) 1/1 - 1/1", str(r))
+
 
 
 
