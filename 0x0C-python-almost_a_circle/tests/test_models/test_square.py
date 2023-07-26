@@ -50,7 +50,7 @@ class TestSquare(unittest.TestCase):
     def test_save_to_file_None(self):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
-            self.assertEqual(f.read(), '[]')
+            self.assertEqual("[]", f.read())
 
 class TestSquareErr(unittest.TestCase):
     def test_square_first_str(self):
