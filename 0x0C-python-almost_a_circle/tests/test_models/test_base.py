@@ -84,3 +84,5 @@ class TestBase_to_json_string(unittest.TestCase):
     def test_to_json_string_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.to_json_string([], 1)
+    def test_to_json_string(self):
+        self.assertEqual(Base.to_json_string([{'id': 12}]), '[{"id": 12}]')
