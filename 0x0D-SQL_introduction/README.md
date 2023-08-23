@@ -114,3 +114,10 @@ Write a script that lists all records with a score >= 10 in the table second_tab
 	* Results should display both the score and the name (in this order)
 	* Records should be ordered by score (top first)
 	* The database name will be passed as an argument of the mysql command
+
+### 12. Cheating is bad
+
+Write a script that updates the score of Bob to 10 in the table second_table.
+
+* You are not allowed to use Bob’s id value, only the name field
+* The database name will be passed as an argument of the mysql command
