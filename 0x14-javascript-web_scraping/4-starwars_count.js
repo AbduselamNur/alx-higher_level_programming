@@ -8,12 +8,9 @@ req(url, (err, response, body) => {
     console.error(err);
   } else {
     const data = JSON.parse(body);
-    let count = 0;
-    for (const film of data.results) {
-      if (film.characters.includes(searchUrl)) {
-        count++;
-      }
-    }
+    const count = data.results.filter((film) => {
+      return film.characters.includes(searchUrl);
+    }).length;
     console.log(count);
   }
 });
