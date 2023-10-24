@@ -3,7 +3,7 @@
 const req = require('request');
 const url = process.argv[2];
 const searchUrl = 'https://swapi-api.alx-tools.com/api/people/18/';
-req.get(url, (err, response, body) => {
+req(url, (err, response, body) => {
   if (err) {
     console.error(err);
   } else {
